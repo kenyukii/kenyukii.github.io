@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*The 'main' section is styled with a full-screen background image, 
+    centered both vertically and horizontally.
+     The background image is set to cover the entire screen and has a 100% 
+     width and height. */
+.main{ 
+    width: 100%; 
+    background: url(pic/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 300vh;
+    position: relative;
+    font-family: sans-serif;
+}
+/*the 'navbar' section is styled with a fixed top position,
+ displaying the logo on the left and a list of navigation 
+ links on the right. The links have a hover effect that changes 
+ the color to create an interactive and dynamic user experience.*/
+
+.navbar{
+    width: 86%;
+    display: flex;
+    margin: auto;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo{
+    width: 160px;
+    cursor: pointer;
+    margin-top: -3%;
+    margin-left: -2%;
+}
+
+ul{
+    margin-top: -4%;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 16px;
+}
+
+ul li a{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: darkslategray;
+    margin-top: -3%;
+    transition: .4s ease;
+
+}
+
+ul li a:hover{
+    color: rgb(230,104,59);
+}
+/*The 'info' section is styled with a centered title and subtitle,
+ along with a call-to-action button. The button has a background color
+  and text color that changes when the user hovers over it.
+*/
+.info{
+    margin-left: 7%;
+    margin-top: 6%;
+}
+
+.info h1{
+    font-size: 65px;
+    color: rgb(36,32,30);
+    margin-top: -8%;
+}
+
+.info h2{
+    font-size: 25px;
+    letter-spacing: 1px;
+    line-height: 24px;
+   margin-left: -30%;
+}
+
+.info span{
+    color: rgb(230,104,59);
+}
+
+.info a{
+    text-decoration:  none;
+    color: #fff;
+    background: rgb(36,32,30);
+    margin: 26px 0;
+    padding: 10px 18px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: .4s ease;
+}
+
+.info a:hover{
+    background: rgb(59,174,209);
+}
+/* The 'text-container' section is styled with a fixed position
+ and a fixed width. It contains the main text content of the page
+  and includes a box-shadow to create depth.*/
+.text-container {
+    position: absolute;
+    top: 1150px;
+    left: 400px;
+    width: 60%;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: rgb(230,104,59);
+    margin-top: -8%;
+   }
+   /*The 'glowing-box-container' sections are styled with
+    two variations, one using a grid layout and the other using
+     a flex layout. Both containers include a position relative and
+      include a top margin of 130 pixels. The glowing boxes inside the
+       containers have a colored background, rounded corners, and a box
+        shadow for depth. The text inside the boxes has a colored glowing
+         effect using text-shadow.*/
+.glowing-box-container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px; 
+    margin-top: 130px;
+}
+.glowing-box-container2 {
+    display: flex;
+    grid-template-columns: 60fr 1fr;
+    gap: 100px;
+margin-top: -190px; }
+
+.glowing-box {
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(255, 2, 2, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: #c43030;
+    margin: auto;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+/*The 'image' section is styled with a fixed position and includes
+ an image with a set width and height. The image is also styled with
+  absolute positioning, a 50% width and height, and a left property of 50%.
+   This centers the image horizontally within the container.*/
+.image{
+    width: 30%;
+    height: 40%;
+    position: absolute;
+    right: 100px;
+    top: 30%;
+}
+
+.image img {
+    position: absolute;
+    height: 50%;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 115%;
+    transition: left 2s ease;
+}
+
+/*The 'icons' section is styled with a fixed top position, 
+a flex layout to space the icons evenly across the page, and a
+ set width and height. Each icon has a text-decoration of none, 
+ a colored link, and a hover effect that changes the color.*/
+.icons {
+    display: flex;
+    justify-content: space-around; 
+    position: absolute;
+   top: 40%;
+    width: 45%;
+}
+.icons a{
+    text-decoration: none;
+    color: #cc1313;
+    
+}
+
+.icons ion-icon {
+    margin-left: 7%;
+    color: #db2222;
+    margin-right: -50px;
+    font-size: 40px;
+    transition: .4s ease;
+}
+    
+
+.icons ion-icon:hover{
+    color: rgb(59,174,209);
+}
+/* The 'footer' section is styled with a fixed background color,
+ centered text, and a 20-pixel padding. It uses flex layout to center
+  the content vertically and horizontally.*/
+footer {
+    background-color: #c7c9c3;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*The 'autoplay-video' section is styled with an absolute position,
+ a width and height of 100%, and a 1% left margin.*/
+.autoplay-video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 160%;
+    left: 1%;
+    border: 0px solid #ccc;
+  }
+  /*The 'carousel' section is styled with a relative position,
+   a 100% width and height, and a display of block. It also includes
+    a z-index to ensure the carousel images appear above other element
+    s on the page. The carousel image is styled with absolute positioning,
+     a width and height of 40%, and a 33% left margin. It also includes a 
+     negative top margin of 10% to adjust the image positioning. The first
+      child image of the carousel is hidden using the :first-child pseudo-class.*/
+  .carousel {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative; 
+}
+
+.carousel img {
+    display: block;
+    width: 34%;
+    height: 43%;
+    position: absolute; 
+    top: -10%;
+    left: 37%; 
+}
+
+.carousel img:first-child {
+    display: none;
+}

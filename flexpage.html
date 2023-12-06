@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Webpage</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    
+    <div class="main">
+        <div class="navbar">
+            <img src="pic\logo.png" class="logo">
+
+            <ul>
+                <li><a href="index.html">HOME PAGE</a></li>
+                <li><a href="ITIII blog.html"> ITIII BLOG PAGE</a></li>
+                <li><a href="flexpage.html">FLEX PAGE</a></li>
+               
+            </ul>
+        </div>
+
+        <div class="info">
+            <center><h1><span>Hi</span> this is my <span> flex </span> page</h1><br> <br> <br>
+            <h3><span>i'm  </span> gonna flex my girlfriend,family and friends</h3>
+            <h3>we have been together for almost 1 yr and 6 months and still counting <br>
+                i love her so much that she is the best thing that came in my life. <br>
+                And my ever loving and supportive family that always there to guide <br>
+                me at the right path and loving me of who i am and always there to understand me.<br>
+                and my friends who always there to comfort me and help me at my lowest who makes<br>
+                me happy when i'm sad and always there to listen about my rant about schools and other things.
+            </center>
+                
+        </div>
+
+        <div class="carousel">
+            <img src="pic\img1.jpg" alt="Image 1">
+            <img src="pic\img2.jpg" alt="Image 2">
+            <img src="pic\img3.jpg" alt="Image 3">
+            <img src="pic\img4.jpg" alt="image 4">
+            <img src="pic\img5.jpg" alt="image 5">
+            <img src="pic\img6.jpg" alt="image 6">
+            <img src="pic\img7.jpg" alt="image 7">
+        </div>
+       <script>let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const timePerSlide = 3000; 
+        
+        function showNextSlide() {
+            images[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].style.display = 'block';
+        }
+        
+        function startCarousel() {
+            setInterval(showNextSlide, timePerSlide);
+        }
+        
+        startCarousel();</script>
+        
+        <div>
+            <footer>
+                <p><H3>HTML CSS</H3></p>
+            </footer></div>
+    
+
+    
+
+</body>
+</html>

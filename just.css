@@ -1,0 +1,239 @@
+/*@import url(): This rule imports a CSS stylesheet from a 
+specified URL. In this case, 
+it imports the Poppins font from Google Fonts.*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ font-family: sans-serif;
+}
+/*This rule applies styles to the body element of the document.
+ Here, it sets the height, background size, and conic gradients for the 
+ background. It also uses the mix-blend-mode property to determine how an
+  element's content should blend with the background content.*/
+body {
+ height: 200vh;                
+ background-size: 400%, 400%
+ conic-gradient(at var(--m) calc(var(--s)*0.5777), transparent 270deg, #000 0deg),
+ conic-gradient(at calc(100% - var(--m)) calc(var(--s)*0.5777), #000 90deg, transparent 0deg),
+ conic-gradient(from -60deg at 50% calc(var(--s)*0.8662)             , var(--v1)),
+ conic-gradient(from -60deg at 50% calc(var(--s)*0.8662 + 2*var(--m)), var(--v2)),
+ conic-gradient(from 120deg at 50% calc(var(--s)*1.4435 + 3*var(--m)), var(--v1)),
+ conic-gradient(from 120deg at 50% calc(var(--s)*1.4435 +   var(--m)), var(--v2)),
+ linear-gradient(90deg, #fff calc(50% - var(--m)),#000 0 calc(50% + var(--m)), #fff 0);
+ background-size: calc(var(--s) + 2*var(--m)) calc(var(--s)*1.732 + 3*var(--m)); 
+ mix-blend-mode:lighten;
+}
+/*html:before: This rule inserts a pseudo-element before the start of the
+ content of the document's html element. Here, it's used to create a linear 
+ gradient background.*/
+html:before {
+ content: "";
+ position: absolute;      
+ inset: 0;
+ background:linear-gradient( rgb(0, 0, 0)) left/400% 100%;
+ height: 200vh;
+}
+/*@keyframes f: This rule defines a keyframes animation named f. Here,
+ it's used to move the background from left to right.*/
+@keyframes f {
+  100% {background-position:right}    
+}
+/*header: This rule applies styles to the header element. Here,
+ it sets the width, position, margin, and color.*/
+header{  
+ width: 100%;
+ position: absolute;
+ margin-left: 10px;
+ margin-right: 10px;
+}
+/*.container: This rule applies styles to an element with the class container.
+ Here, it sets the text alignment, position, margin, and color.*/
+.container{
+ text-align: center;
+ position: relative;
+ margin-top: 10%;
+ margin-left: 30px;
+ margin-right: 30px;
+ color: beige;
+    
+}
+/*.container h2, h3: This rule applies styles to the h2 and h3 elements
+ within the container element. Here, it sets the font size, margin, text 
+ alignment, and color.*/
+.container h2{
+ font-size: 45px;
+ margin-top: 15%;  
+ text-align: justify;
+ margin-left: 21.9%;
+ margin-right: 21.9%;
+ color: rgb(230,104,59); 
+}
+/*.container img: This rule applies styles to img elements within
+ the container element. Here, it sets the max width, position, margin, 
+ border radius, cursor, and transition properties.*/
+.container img{
+ max-width: 900px;
+ position: center;
+ margin-top: 10%;
+ align-items: center;
+ border-radius: 20px;   
+ margin-left: 30px;
+ margin-right: 30px;
+ cursor: pointer;
+}   
+/*nav: This rule applies styles to the nav element. Here, 
+it sets the display, justify content, align items, position, 
+z-index, and cursor properties.*/
+nav{
+ display: flex;
+ justify-content: space-between;   
+ align-items: center;
+ position: relative;
+ z-index: 1;
+ cursor: pointer;
+}
+/*.logo: This rule applies styles to the logo class within the nav element.
+ Here, it sets the text decoration, color, font size, font weight, padding, 
+ and text alignment.*/
+.logo
+{
+ text-decoration: none;
+ color: rgb(230,104,59);
+ font-size: 30px;
+ font-weight: bold;
+ padding-top: 10px;
+ padding-left: 5%;
+}
+/*.nav-links: This rule applies styles to the nav-links class within
+ the nav element. Here, it sets the text align, padding, border bottom
+  left radius, and cursor properties.*/
+.nav-links
+{
+ text-align: right;
+ padding: 10px 30px;
+ border-bottom-left-radius: 18px;
+}
+/*.nav-links ul li a: This rule applies styles to the anchor tags within
+ the li elements within the ul element within the nav-links class. Here,
+  it sets the font size, font weight, text decoration, color, margin,
+   transition, and hover color.*/
+.nav-links ul{
+    margin-top: 7%;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 16px;
+}
+
+.nav-links ul li a{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: darkslategray;
+    margin-top: -3%;
+    transition: .4s ease;
+}
+
+.nav-links ul li a:hover
+{                            
+ color: rgb(230,104,59);
+}                          
+
+.border img {
+ transition: .5s ease;  
+ position: relative;
+}
+
+.border p {
+ text-align: justify;
+ position: relative ;
+ max-width: 100%;      
+ margin-left: 25rem;
+ margin-right: 25rem;      
+ font-size: 20px;
+ color:rgb(230,104,59);
+}
+    /*.border img: This rule applies styles to img elements within an 
+    element with the border class. Here, it sets the transition and position 
+    properties.*/
+.border img:hover{
+ box-shadow: 0 0 0 5pxrgb(230,104,59);   
+ transition: .5s ease;
+}
+/*.text: This rule applies styles to an element with the text class. Here,
+ it sets the position, font size, and color properties.*/
+.text {                 
+ position: relative;  
+ font-size: 120px;
+ }
+/*.text span: This rule applies styles to span elements within an element
+ with the text class. Here, it sets the font family, position, display,
+  color, and text transform properties.*/
+.text span {
+ font-family: 'Alfa Slab One';
+ position: relative;
+ display: inline-block;
+ color: rgb(230,104,59);
+ text-transform: uppercase;
+}
+
+/*footer: This rule applies styles to the footer element. Here,
+ it sets the background color, color, padding, display, align items,
+  and justify content properties.*/
+footer {               
+ background-color: #c7c9c3;
+ color: #ffffff;
+ padding: 20px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+/*@media (max-width: xxx px): These rules apply styles for different 
+screen sizes. They set the font size for the h2 and h3 elements, and the
+ max width, margin, and font size for the p elements within the border class
+  and the font size for the anchor tags within the li elements within the
+   ul element within the nav-links class..</s>*/
+@media (max-width: 1024px) {
+ .container h2, h3{
+    font-size: 40px;
+ }
+}
+
+@media (max-width: 768px) {
+ .container h2, h3{
+    font-size: 30px;
+ }
+
+ .nav-links ul li a{
+    font-size: 14px;
+ }
+
+ .border p {
+    max-width: 60%;      
+    margin-left: 23rem;
+    margin-right: 23rem;      
+    font-size: 18px;
+ }
+}
+
+@media (max-width: 480px) {
+ .container h2, h3{
+    font-size: 20px;
+ }
+
+ .nav-links ul li a{
+    font-size: 12px;
+ }
+
+ .border p {
+    max-width: 50%;      
+    margin-left: 21rem;
+    margin-right: 21rem;      
+    font-size: 16px;
+ }
+}
